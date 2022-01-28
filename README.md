@@ -26,7 +26,7 @@ uses ngrok for over the web gameplay
 
 ## Setup
 
-ngrok authtoken must be setup
+ngrok must be setup
 [ngrock documentation](https://ngrok.com/docs)
 
 the file is good to go by default but u can change some variables to ur liking
