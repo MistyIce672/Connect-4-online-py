@@ -139,8 +139,16 @@ def drawboard():
 	pygame.display.update()
 
 #creating connectiion and getting player
-ip = str(input("Enter ip: "))
-port = int(input("Enter port: "))
+ip = str(input("Enter ip leave blank for local host: "))
+if ip == "":
+	ip = "127.0.0.1"
+	print("starting on local host")
+port = input("Enter port: ")
+try:
+	port = int(port)
+except:
+	port = 55555
+	print("starting on port 55555")
 n = Network(ip,port)
 player = int(n.getP())
 if player == 2:
