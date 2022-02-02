@@ -1,5 +1,6 @@
 <p align="center">
-  <img src="https://imgur.com/a/TK1pBzk">
+  <img src="https://imgur.com/gallery/5kpDLBT">
+  <img src="https://imgur.com/gallery/TK1pBzk">
 </p>
 
 # Python connect four online/offline 
@@ -9,24 +10,47 @@ uses ngrok for over the web gameplay
 ## **Features** : 
 -automatic separate checks for verticle horizontal and diagonal wins
 -server-side and client-side scripts
+-server will log and display each move
 
-## Basic Usage offline
+## Basic Usage offline (no GUI)
 1) use requirements.txt to install modules  `pip install -r requirements.txt`
-2) run main.py `python main.py`
+2) run main.py `python main.py` from the singleplayer folder
 3) "!" shows the location of the last move
 
-## Basic Usage online
+### Basic Usage offline (GUI)
+1) use requirements.txt to install modules  `pip install -r requirements.txt`
+2) run main.py `python main.py` from singleplayer_gui folder
+3) the circles on top will show the player turn 
+
+## Basic Usage online (no GUI)
 1) use requirements.txt to install modules  `pip install -r requirements.txt` (NumPy is only needed for server script)
-2) run server.py `python main.py` 
+2) run server.py `python server.py`  from multiplayer folder
 3) run `ngrock TCP 55555` to host over the internet [ngrock documentation](https://ngrok.com/docs)
-4) run the client `python client.py`
+4) run the client `python client.py` from the multiplayer folder
 5) to connect over the internet type the address and IP provided by ngrok [ngrock documentation](https://ngrok.com/docs)
+5) to connect to the localhost use IP `127.0.0.1` and port `55555`
 6) once 2 clients connect game will begin 
 7) "!" shows the location of the last move
 
+### Basic Usage online (GUI)
+1) use requirements.txt to install modules  `pip install -r requirements.txt` (NumPy is only needed for server script)
+2) run server.py `python server.py`  from multiplayer_gui folder
+3) run `ngrock TCP 55555` to host over the internet [ngrock documentation](https://ngrok.com/docs)
+3) running multiplayer GUI on ngrok is not recommended due to a performance issue 
+4) run the client `python client.py` from the multiplayer_gui folder
+5) to connect over the internet type the address and IP provided by ngrok [ngrock documentation](https://ngrok.com/docs)
+5) to connect to the local host press enter twice without typing IP or port
+6) once 2 clients connect game will begin 
+7) if circles on the top are grey you are waiting for the opponent to make a move
+
+## bugs/issues
+
+performance issue on multiplayer GUI when waiting for the server to respond window will become un responsive
+if you know fix for this please let me know
+
 ## Setup
 
-ngrok must be setup
+ngrok authtoken must be setup
 [ngrock documentation](https://ngrok.com/docs)
 
 the file is good to go by default but u can change some variables to ur liking
@@ -44,6 +68,10 @@ the game runs and is stored on the server
 the client has a dummy version of the game for printing 
 
 client requires network.py to work 
+
+## download
+
+download size should be roughly 80 MB
 
 ## Resources
 
