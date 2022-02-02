@@ -1,6 +1,6 @@
 <p align="center">
-  <img src="https://imgur.com/gallery/5kpDLBT">
-  <img src="https://imgur.com/gallery/TK1pBzk">
+  <img src="https://i.imgur.com/z8ig6eN.png">
+  <img src="https://i.imgur.com/mZaIpg1.png">
 </p>
 
 # Python connect four online/offline 
